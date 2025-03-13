@@ -13,8 +13,8 @@ import java.util.Date;
  * Date:2025/3/13
  * Time:16:01
  *
- * @Author 周东汉
- * @Version 1.0
+ * Author 周东汉
+ * Version 1.0
  * Description:
  */
 @TableName("user")

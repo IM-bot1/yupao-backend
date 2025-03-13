@@ -1,8 +1,6 @@
 package com.yupi.yupao.model.domain.dto;
 
-import com.baomidou.mybatisplus.annotation.IdType;
-import com.baomidou.mybatisplus.annotation.TableId;
-import com.baomidou.mybatisplus.annotation.TableLogic;
+
 import com.yupi.yupao.common.PageRequest;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
@@ -16,8 +14,8 @@ import java.util.Date;
  * Date:2025/3/12
  * Time:16:27
  *
- * @Author 周东汉
- * @Version 1.0
+ * Author 周东汉
+ * Version 1.0
  * Description:
  */
 @EqualsAndHashCode(callSuper = true)

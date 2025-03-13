@@ -20,13 +20,13 @@ import com.yupi.yupao.service.UserService;
 import com.yupi.yupao.service.UserTeamService;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.BeanUtils;
-import org.springframework.beans.factory.annotation.Autowired;
+
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.support.TransactionTemplate;
 import org.springframework.util.CollectionUtils;
 
 import javax.annotation.Resource;
-import javax.sql.DataSource;
+
 import java.lang.reflect.Field;
 import java.util.ArrayList;
 import java.util.Date;
@@ -35,8 +35,8 @@ import java.util.Optional;
 
 /**
 * @author HP
-* @description 针对表【team(队伍表)】的数据库操作Service实现
-* @createDate 2025-03-12 14:47:39
+* description 针对表【team(队伍表)】的数据库操作Service实现
+* createDate 2025-03-12 14:47:39
 */
 @Service
 public class TeamServiceImpl extends ServiceImpl<TeamMapper, Team>
@@ -56,8 +56,6 @@ public class TeamServiceImpl extends ServiceImpl<TeamMapper, Team>
      */
     @Override
     public long createTeam(Team team, User LoginUser) {
-
-        final long userId = LoginUser.getId();
         // 1 请求参数校验
         if(team == null){
             throw new BusinessException(ErrorCode.NULL_ERROR);
@@ -66,6 +64,7 @@ public class TeamServiceImpl extends ServiceImpl<TeamMapper, Team>
         if(LoginUser == null){
             throw new BusinessException(ErrorCode.NOT_LOGIN);
         }
+        final long userId = LoginUser.getId();
         // 3 校验信息
         //  1).队伍人数 > 1 and <= 20
 //        System.out.println("team.getMaxNum() = " + team.getMaxNum());

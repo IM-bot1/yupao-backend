@@ -7,7 +7,7 @@ import lombok.Data;
 
 import java.io.Serializable;
 import java.util.Date;
-import java.util.List;
+
 
 /**
  * ClassName:TeamUserVO
@@ -16,8 +16,8 @@ import java.util.List;
  * Date:2025/3/13
  * Time:15:58
  *
- * @Author 周东汉
- * @Version 1.0
+ * Author 周东汉
+ * Version 1.0
  * Description:
  */
 @TableName("team_user")
