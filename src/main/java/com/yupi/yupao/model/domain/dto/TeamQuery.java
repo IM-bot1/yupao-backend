@@ -36,6 +36,11 @@ public class TeamQuery extends PageRequest {
     private Long userId;
 
     /**
+     * 搜索关键字
+     */
+    private String SearchKey;
+
+    /**
      * 描述
      */
     private String description;
@@ -49,5 +54,8 @@ public class TeamQuery extends PageRequest {
      * 队伍状态 0 - 正常，1 - 私有，2 - 加密
      */
     private Integer status;
-
+    /**
+     * 过期时间
+     */
+    private Date expireTime;
 }
